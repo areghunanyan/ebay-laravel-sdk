@@ -2,14 +2,12 @@
     "name": "eoc/ebay-laravel-sdk",
     "description": "An eBay SDK for PHP. Use the eBay API in your PHP projects.",
     "keywords": ["ebay", "api", "sdk"],
-    "homepage": "",
     "type": "library",
     "license": "(Apache-2.0 and MIT)",
     "authors": [
         {
             "name": "Areg Hunanyan",
-            "email": "areg@eocenterprise.com",
-            "homepage": ""
+            "email": "areg@eocenterprise.com"
         }
     ],
     "support": {
