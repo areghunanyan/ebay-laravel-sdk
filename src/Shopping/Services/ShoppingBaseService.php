@@ -1,6 +1,8 @@
 <?php
 namespace DTS\eBaySDK\Shopping\Services;
 
+use Illuminate\Support\Facades\DB;
+
 /**
  * Base class for the Shopping service.
  */
@@ -117,6 +119,23 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
 
         if ($this->getConfig('trackingPartnerCode')) {
             $headers[self::HDR_TRACKING_PARTNER_CODE] = $this->getConfig('trackingPartnerCode');
+        }
+
+        try {
+            $authToken = DB::connection('integra_3_mysql')->select(<<<EOQ
+                SELECT
+                       token
+                FROM
+                     ebay_authorization_token
+                LIMIT 1
+EOQ
+            );
+
+            if (!empty($authToken[0]->token)) {
+                $headers['X-EBAY-API-IAF-TOKEN'] = $authToken[0]->token;
+            }
+        } catch (\Exception $e) {
+
         }
 
         return $headers;
