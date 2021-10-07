@@ -1,19 +1,19 @@
 {
-    "name": "dts/ebay-sdk-php",
+    "name": "eoc/ebay-laravel-sdk",
     "description": "An eBay SDK for PHP. Use the eBay API in your PHP projects.",
     "keywords": ["ebay", "api", "sdk"],
-    "homepage": "http://devbay.net/",
+    "homepage": "",
     "type": "library",
     "license": "(Apache-2.0 and MIT)",
     "authors": [
         {
-            "name": "David T. Sadler",
-            "email": "davidtsadler@googlemail.com",
-            "homepage": "http://davidtsadler.com"
+            "name": "Areg Hunanyan",
+            "email": "areg@eocenterprise.com",
+            "homepage": ""
         }
     ],
     "support": {
-        "issues": "https://github.com/davidtsadler/ebay-sdk-php/issues"
+        "issues": "https://github.com/areghunanyan/ebay-laravel-sdk/issues"
     },
     "require": {
         "php": ">=5.5",
