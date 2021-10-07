@@ -1,10 +1,10 @@
-# EBAY-SDK-PHP
+# EBAY-LARAVEL-SDK
 
 **This repository is no longer actively maintained and has been archived.**
 
 This project enables PHP developers to use the [eBay API](https://go.developer.ebay.com/api-documentation) in their PHP code, and build software using services such as [Finding](http://developer.ebay.com/Devzone/finding/Concepts/FindingAPIGuide.html), [Trading](http://developer.ebay.com/DevZone/guides/ebayfeatures/index.html), [Shopping](http://developer.ebay.com/Devzone/shopping/docs/Concepts/ShoppingAPIGuide.html), etc. You can get started by [installing the SDK via Composer](https://github.com/davidtsadler/ebay-sdk-php/wiki/Installation) and by following the [Basic Usage Guide](http://devbay.net/sdk/guides/getting-started/basic-usage.html).
 
-This is a personal project that has been developed by me, [David T. Sadler](https://davidtsadler.com). I decided to create this project to make up for the lack of an official SDK for PHP. It is in no way endorsed, sponsored or maintained by eBay.
+This is a personal project that has been developed by me, [Areg Hunanyan]. I decided to create this project to make up for the lack of an official SDK for PHP. It is in no way endorsed, sponsored or maintained by eBay.
 
 ## Features
 
@@ -14,9 +14,9 @@ This is a personal project that has been developed by me, [David T. Sadler](http
 
 ## Resources
 
-  - [User Guides](https://github.com/davidtsadler/ebay-sdk-php/wiki) - Getting started guide and in-depth information.
-  - [Examples](https://github.com/davidtsadler/ebay-sdk-examples) - Several examples of using the SDK.
- 
+  - [User Guides](https://github.com/areghunanyan/ebay-laravel-sdk/wiki) - Getting started guide and in-depth information.
+  - [Examples](https://github.com/areghunanyan/ebay-laravel-sdk/wiki) - Several examples of using the SDK.
+
 ## Requirements
 
   - PHP 5.5 or greater with the following extensions:
@@ -38,7 +38,7 @@ The SDK can be installed with [Composer](http://getcomposer.org/). Please see th
   1. Install the SDK.
 
      ```
-     php composer.phar require dts/ebay-sdk-php
+     php composer.phar require eoc/ebay-laravel-sdk
      ```
 
   1. Require Composer's autoloader by adding the following line to your code.
@@ -76,4 +76,4 @@ printf("The official eBay time is: %s\n", $response->Timestamp->format('H:i (\G\
 
 Licensed under the [Apache Public License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
 
-Copyright 2016 [David T. Sadler](http://twitter.com/davidtsadler)
+Copyright 2021 [Areg Hunanyan]
