@@ -9,7 +9,7 @@ class JsonParser
      */
     public static function parseAndAssignProperties($object, $json)
     {
-        $properties = !empty($json) ? json_decode($json, true) : [];
+        $properties = (!empty($json) && $json !== 'null') ? json_decode($json, true) : [];
         self::assignProperties($object, $properties);
     }
 
