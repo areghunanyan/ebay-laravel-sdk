@@ -1,6 +1,8 @@
 <?php
 namespace DTS\eBaySDK\Parser;
 
+use Illuminate\Support\Facades\Log;;
+
 class JsonParser
 {
     /**
@@ -10,6 +12,18 @@ class JsonParser
     public static function parseAndAssignProperties($object, $json)
     {
         $properties = (!empty($json) && $json !== 'null') ? json_decode($json, true) : [];
+        if (empty($properties)) {
+            $properties = [];
+            try {
+                Log::channel('ebay-sdk-errors')->info('JSON Parser Issue: JSON value ' . $json);
+            } catch (\Exception $e) {
+                try {
+                    Log::channel('ebay-sdk-errors')->error('JSON Parser Error: ' . $e->getMessage());
+                } catch (\Exception $e1) {
+
+                }
+            }
+        }
         self::assignProperties($object, $properties);
     }
 
